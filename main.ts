@@ -5,7 +5,9 @@ basic.forever(function () {
     obstacle = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
     if (obstacle < 15) {
         cuteBot.stopcar()
+        cuteBot.colorLight(cuteBot.RGBLights.ALL, 0xff0000)
     } else {
         cuteBot.forward()
+        cuteBot.colorLight(cuteBot.RGBLights.ALL, 0x00ff00)
     }
 })
